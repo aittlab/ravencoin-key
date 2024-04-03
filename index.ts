@@ -17,10 +17,7 @@ export type Network = "rvn" | "rvn-test" | "evr" | "evr-test";
 function getNetwork(name: Network) {
   const c = name.toLowerCase(); //Just to be sure
   const map = {
-    rvn: chains.aitt.mainnet.versions,
-    "rvn-test": chains.rvn.testnet?.versions,
-    evr: chains.evr.mainnet.versions,
-    "evr-test": chains.evr.testnet?.versions,
+    rvn: chains.aitt.mainnet.versions
   };
 
   const network = map[c];
